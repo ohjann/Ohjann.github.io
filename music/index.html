@@ -5,29 +5,6 @@
         <script src="../FitText.js/jquery.fittext.js"></script>
         <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
         <title>Eoghan</title>
-        <script>
-            $(document).ready(function(){
-                var returnValue;
-                $.ajax({
-                    url: 'http://ohjann.netsoc.ie/music/getTracks.php',
-                    type: 'POST',
-                    success: function(data){
-                        returnValue = data;
-                        var tracklist = returnValue.split(',');
-                        tracklist.forEach(function(element, index, theArray){
-                            $('#moosick').append('<p class="music">'+element+'<br><audio src="http://ohjann.netsoc.ie/music/'+element+'" preload="none" /></p>');
-                        });
-                        $('#tracks').append(tracklist);
-                        audiojs.events.ready(function() {
-                            var as = audiojs.createAll();
-                        });
-                    },
-                    error: function() { 
-                        alert("Status"); 
-                    } 
-                });
-            });
-        </script>
     </head>
     <body>
         <section class="links">
