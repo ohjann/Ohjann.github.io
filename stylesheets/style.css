@@ -71,6 +71,30 @@ ul, ol {
 }
 
 /* line 58, ../sass/style.scss */
+.menu {
+  z-index: 99;
+  padding: 40%;
+  padding-bottom: 0;
+  float: left;
+}
+/* line 63, ../sass/style.scss */
+.menu img {
+  width: 1.2em;
+  height: 1.2em;
+  margin: auto;
+  padding: auto;
+  transition: all .2s ease;
+}
+/* line 71, ../sass/style.scss */
+.menu img:hover {
+  transform: scale(1.1);
+}
+/* line 74, ../sass/style.scss */
+.menu img:active {
+  transform: scale(0.9);
+}
+
+/* line 79, ../sass/style.scss */
 .wrapper {
   max-width: 100%;
   margin: auto;
@@ -78,61 +102,48 @@ ul, ol {
   width: 80%;
   float: right;
 }
-@media screen and (max-width: 1230px) {
-  /* line 58, ../sass/style.scss */
-  .wrapper {
-    float: none;
-  }
-}
 
-/* line 69, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .links {
   font-family: 'Futura', sans-serif;
   color: white;
   position: relative;
-  z-index: 1;
+  z-index: 99;
   font-size: 1.3em;
   width: 10%;
   float: left;
 }
-/* line 78, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .links a, .links a:visited {
   text-decoration: none;
   color: #ff92fa;
 }
-/* line 82, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .links ul {
   list-style: none;
   text-align: left;
 }
-/* line 85, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .links ul li {
   border-bottom: 5px solid #ff92fa;
   display: table;
+  margin-left: -999px;
+  transition: transform .15s ease, margin .45s ease;
 }
-@media screen and (max-width: 1230px) {
-  /* line 69, ../sass/style.scss */
-  .links {
-    float: none;
-    width: 100%;
-  }
-  /* line 93, ../sass/style.scss */
-  .links ul li {
-    display: inline;
-  }
+/* line 108, ../sass/style.scss */
+.links ul li.show {
+  margin-left: 0;
 }
-@media screen and (max-width: 600px) {
-  /* line 98, ../sass/style.scss */
-  .links ul {
-    margin-bottom: 0;
-  }
-  /* line 100, ../sass/style.scss */
-  .links ul li {
-    display: table;
-  }
+/* line 111, ../sass/style.scss */
+.links ul li:hover {
+  transform: scale(1.05);
+}
+/* line 114, ../sass/style.scss */
+.links ul li:active {
+  transform: scale(0.95);
 }
 
-/* line 107, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 h1 {
   margin: 0;
   font-weight: normal;
@@ -140,19 +151,19 @@ h1 {
   z-index: 0;
 }
 
-/* line 114, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 .hello {
   white-space: nowrap;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 header {
   max-width: 100%;
   color: #fff873;
   font-family: 'Futura', sans-serif;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .description, .tracks {
   margin-left: 10%;
   margin-top: -7%;
@@ -161,34 +172,34 @@ header {
   text-align: left;
 }
 
-/* line 132, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .tracks {
   margin-top: -16%;
   position: relative;
   z-index: 1;
 }
-/* line 136, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .tracks p:first-child {
   margin-left: -5%;
   margin-bottom: 10%;
 }
 
-/* line 142, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 span {
   opacity: 0.5;
 }
 
-/* line 146, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .music span {
   font-size: 0.5em;
 }
 
-/* line 150, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 iframe {
   border: 5px solid #ff92fa;
 }
 
-/* line 155, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 form {
   font-size: 0.8em;
   width: 80%;
@@ -198,12 +209,12 @@ form {
   margin-right: auto;
   overflow: hidden;
 }
-/* line 165, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 form label {
   display: inline-block;
   width: 15%;
 }
-/* line 169, ../sass/style.scss */
+/* line 184, ../sass/style.scss */
 form input {
   display: inline-block;
   min-width: 50%;
@@ -212,11 +223,11 @@ form input {
   border: 4px solid rgba(0, 0, 0, 0);
   outline: none;
 }
-/* line 178, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 form input:focus, form textarea:focus {
   border: 4px solid #fff873;
 }
-/* line 182, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 form textarea {
   width: 100%;
   display: block;
@@ -225,13 +236,34 @@ form textarea {
   border: 4px solid rgba(0, 0, 0, 0);
   outline: none;
 }
-/* line 191, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 form .form-group {
   margin-bottom: 2%;
   min-height: 2em;
 }
-/* line 196, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 form .send {
   font-family: 'Orator', sans-serif;
   float: right;
+}
+@media screen and (max-width: 600px) {
+  /* line 170, ../sass/style.scss */
+  form {
+    width: 100%;
+  }
+}
+
+/* line 221, ../sass/style.scss */
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  opacity: 0.7;
+  z-index: 98;
+  display: none;
 }
