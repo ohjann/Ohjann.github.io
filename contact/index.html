@@ -23,21 +23,29 @@
             </ul>
         </section>
         <section class="wrapper">
-            <header>
-                <h1>CONTACT.</h1>
+            <header class="hello">
+                <h1>SAY HELLO.</h1>
             </header> 
             <div class="description">
                 <p>my name is eoghan.</p>
-                <p>you can email me at eoghan@hyn.es.</p>
-                <p>if you wanna send me some old-fashioned junk mail you can get me at:</p>
-                <ul>
-                    <li><span><sub>Eoghan Hynes</sub></span></li>
-                    <li><span><sub>Clooniffe</sub></span></li>
-                    <li><span><sub>Moycullen</sub></span></li>
-                    <li><span><sub>Co. Galway</sub></span></li>
-                    <li><span><sub>Ireland</sub></span></li>
-                </ul>
-                <p>(someone remind me to finish this page)</p>
+                <p>you can email me at eoghan@hyn.es.<br>or fill out this form:</p>
+                 <div>
+                    <form method="POST" action="//forms.brace.io/eoghan@hyn.es">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" name="name" label="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="replyto">Email:</label>
+                            <input id="replyto" type="email" name="_replyto">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleTextArea">Message:</label>
+                            <textarea name="message" class="form-control" rows="3"></textarea>    
+                        </div>
+                        <input class="send" type="submit" value="Send">
+                    </form>
+                </div>               
            </div>
         </section>
         <script>
