@@ -75,9 +75,8 @@ ul, ol {
   z-index: 99;
   padding: 40%;
   padding-bottom: 0;
-  float: left;
 }
-/* line 63, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .menu img {
   width: 1.2em;
   height: 1.2em;
@@ -85,16 +84,16 @@ ul, ol {
   padding: auto;
   transition: all .2s ease;
 }
-/* line 71, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .menu img:hover {
   transform: scale(1.1);
 }
-/* line 74, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 .menu img:active {
   transform: scale(0.9);
 }
 
-/* line 79, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .wrapper {
   max-width: 100%;
   margin: auto;
@@ -103,7 +102,7 @@ ul, ol {
   float: right;
 }
 
-/* line 87, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 .links {
   font-family: 'Futura', sans-serif;
   color: white;
@@ -113,37 +112,37 @@ ul, ol {
   width: 10%;
   float: left;
 }
-/* line 96, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .links a, .links a:visited {
   text-decoration: none;
   color: #ff92fa;
 }
-/* line 100, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .links ul {
   list-style: none;
   text-align: left;
 }
-/* line 103, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 .links ul li {
   border-bottom: 5px solid #ff92fa;
   display: table;
   margin-left: -999px;
   transition: transform .15s ease, margin .45s ease;
 }
-/* line 108, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .links ul li.show {
   margin-left: 0;
 }
-/* line 111, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .links ul li:hover {
   transform: scale(1.05);
 }
-/* line 114, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 .links ul li:active {
   transform: scale(0.95);
 }
 
-/* line 122, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 h1 {
   margin: 0;
   font-weight: normal;
@@ -151,19 +150,19 @@ h1 {
   z-index: 0;
 }
 
-/* line 129, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 .hello {
   white-space: nowrap;
 }
 
-/* line 133, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 header {
   max-width: 100%;
   color: #fff873;
   font-family: 'Futura', sans-serif;
 }
 
-/* line 139, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .description, .tracks {
   margin-left: 10%;
   margin-top: -7%;
@@ -172,34 +171,34 @@ header {
   text-align: left;
 }
 
-/* line 147, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .tracks {
   margin-top: -16%;
   position: relative;
   z-index: 1;
 }
-/* line 151, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .tracks p:first-child {
   margin-left: -5%;
   margin-bottom: 10%;
 }
 
-/* line 157, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 span {
   opacity: 0.5;
 }
 
-/* line 161, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .music span {
   font-size: 0.5em;
 }
 
-/* line 165, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 iframe {
   border: 5px solid #ff92fa;
 }
 
-/* line 170, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 form {
   font-size: 0.8em;
   width: 80%;
@@ -209,12 +208,12 @@ form {
   margin-right: auto;
   overflow: hidden;
 }
-/* line 180, ../sass/style.scss */
+/* line 179, ../sass/style.scss */
 form label {
   display: inline-block;
   width: 15%;
 }
-/* line 184, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 form input {
   display: inline-block;
   min-width: 50%;
@@ -223,11 +222,11 @@ form input {
   border: 4px solid rgba(0, 0, 0, 0);
   outline: none;
 }
-/* line 193, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 form input:focus, form textarea:focus {
   border: 4px solid #fff873;
 }
-/* line 197, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 form textarea {
   width: 100%;
   display: block;
@@ -236,24 +235,24 @@ form textarea {
   border: 4px solid rgba(0, 0, 0, 0);
   outline: none;
 }
-/* line 206, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 form .form-group {
   margin-bottom: 2%;
   min-height: 2em;
 }
-/* line 211, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 form .send {
   font-family: 'Orator', sans-serif;
   float: right;
 }
 @media screen and (max-width: 600px) {
-  /* line 170, ../sass/style.scss */
+  /* line 169, ../sass/style.scss */
   form {
     width: 100%;
   }
 }
 
-/* line 221, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .overlay {
   position: fixed;
   height: 100%;
