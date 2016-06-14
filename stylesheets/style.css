@@ -1,20 +1,18 @@
-@font-face {
-  font-family: Futura;
-  src: url(../fonts/futurastd-medium-webfont.ttf);
+/*@font-face {
+    font-family: Futura;
+    src: url(../fonts/FuturaStd-Bold.ttf );
 }
-
 @font-face {
-  font-family: Orator;
-  src: url(../fonts/orator-regular.ttf);
-}
-
+    font-family: Orator;
+    src: url(../fonts/orator-regular.ttf );
+}*/
 /* line 11, ../sass/style.scss */
 * {
   box-sizing: border-box;
 }
 
 /* line 20, ../sass/style.scss */
-.clearfix:after, form:after {
+.clearfix:after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -24,245 +22,107 @@
 }
 
 /* line 28, ../sass/style.scss */
-.clearfix, form {
+.clearfix {
   display: inline-block;
 }
 
 /* start commented backslash hack \*/
 /* line 30, ../sass/style.scss */
-* html .clearfix, * html form {
+* html .clearfix {
   height: 1%;
 }
 
 /* line 31, ../sass/style.scss */
-.clearfix, form {
+.clearfix {
   display: block;
 }
 
 /* close commented backslash hack */
 /* line 34, ../sass/style.scss */
 html, body {
-  padding: 0;
-  margin: 0;
   height: 100%;
   width: 100%;
-  background: #e8e8e8;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: 'Orator', sans-serif;
-}
-@media screen and (max-width: 600px) {
-  /* line 34, ../sass/style.scss */
-  html, body {
-    background-position: 90% 30%;
-  }
+  margin: 0;
+  font-family: Roboto;
 }
 
-/* line 48, ../sass/style.scss */
-ul, ol {
-  list-style: none;
-}
-
-/* line 52, ../sass/style.scss */
-.main {
-  background: url(../me.svg) no-repeat #e8e8e8;
-  background-size: 30%;
-  background-position: 90% 50%;
-}
-
-/* line 58, ../sass/style.scss */
-.menu {
-  z-index: 99;
-  padding: 40%;
-  padding-bottom: 0;
-}
-/* line 62, ../sass/style.scss */
-.menu img {
-  width: 1.2em;
-  height: 1.2em;
-  margin: auto;
-  padding: auto;
-  transition: all .2s ease;
-}
-/* line 70, ../sass/style.scss */
-.menu img:hover {
-  transform: scale(1.1);
-}
-/* line 73, ../sass/style.scss */
-.menu img:active {
-  transform: scale(0.9);
-}
-
-/* line 78, ../sass/style.scss */
-.wrapper {
-  max-width: 100%;
-  margin: auto;
-  margin-right: 8%;
-  width: 80%;
-  float: right;
-}
-
-/* line 86, ../sass/style.scss */
-.links {
-  font-family: 'Futura', sans-serif;
-  color: white;
-  position: relative;
-  z-index: 99;
-  font-size: 1.3em;
-  width: 10%;
+/* line 40, ../sass/style.scss */
+.music, .github {
+  text-transform: lowercase;
+  height: 100%;
+  width: 50%;
   float: left;
+  text-align: center;
 }
-/* line 95, ../sass/style.scss */
-.links a, .links a:visited {
+
+/* line 47, ../sass/style.scss */
+.music {
+  background: #f50;
+}
+/* line 49, ../sass/style.scss */
+.music h1 {
+  color: #333;
+}
+
+/* line 53, ../sass/style.scss */
+.github {
+  background: #fff;
+}
+/* line 55, ../sass/style.scss */
+.github h1 {
+  color: #555;
+}
+
+/* line 60, ../sass/style.scss */
+a, a:hover, a:active, a:visited {
   text-decoration: none;
-  color: #ff92fa;
 }
-/* line 99, ../sass/style.scss */
-.links ul {
-  list-style: none;
-  text-align: left;
-}
-/* line 102, ../sass/style.scss */
-.links ul li {
-  border-bottom: 5px solid #ff92fa;
-  display: table;
-  margin-left: -999px;
-  transition: transform .15s ease, margin .45s ease;
-}
-/* line 107, ../sass/style.scss */
-.links ul li.show {
-  margin-left: 0;
-}
-/* line 110, ../sass/style.scss */
-.links ul li:hover {
-  transform: scale(1.05);
-}
-/* line 113, ../sass/style.scss */
-.links ul li:active {
-  transform: scale(0.95);
+/* line 63, ../sass/style.scss */
+a:hover * {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
 
-/* line 121, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 h1 {
+  font-size: 10em;
   margin: 0;
-  font-weight: normal;
-  position: relative;
-  z-index: 0;
 }
 
-/* line 128, ../sass/style.scss */
-.hello {
-  white-space: nowrap;
-}
-
-/* line 132, ../sass/style.scss */
-header {
-  max-width: 100%;
-  color: #fff873;
-  font-family: 'Futura', sans-serif;
-}
-
-/* line 138, ../sass/style.scss */
-.description, .tracks {
-  margin-left: 10%;
-  margin-top: -7%;
-  color: black;
-  width: 80%;
-  text-align: left;
-}
-
-/* line 146, ../sass/style.scss */
-.tracks {
-  margin-top: -16%;
-  position: relative;
-  z-index: 1;
-}
-/* line 150, ../sass/style.scss */
-.tracks p:first-child {
-  margin-left: -5%;
-  margin-bottom: 10%;
-}
-
-/* line 156, ../sass/style.scss */
-span {
-  opacity: 0.5;
-}
-
-/* line 160, ../sass/style.scss */
-.music span {
-  font-size: 0.5em;
-}
-
-/* line 164, ../sass/style.scss */
-iframe {
-  border: 5px solid #ff92fa;
-}
-
-/* line 169, ../sass/style.scss */
-form {
-  font-size: 0.8em;
-  width: 80%;
-  background: #dedede;
-  padding: 2%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-/* line 179, ../sass/style.scss */
-form label {
-  display: inline-block;
-  width: 15%;
-}
-/* line 183, ../sass/style.scss */
-form input {
-  display: inline-block;
-  min-width: 50%;
-  font-size: 0.7em;
-  padding: 0.5em;
-  border: 4px solid rgba(0, 0, 0, 0);
-  outline: none;
-}
-/* line 192, ../sass/style.scss */
-form input:focus, form textarea:focus {
-  border: 4px solid #fff873;
-}
-/* line 196, ../sass/style.scss */
-form textarea {
+/* line 74, ../sass/style.scss */
+marquee {
+  background: transparent;
+  color: #14A697;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  display: block;
-  font-size: 0.7em;
-  padding: 0.5em;
-  border: 4px solid rgba(0, 0, 0, 0);
-  outline: none;
-}
-/* line 205, ../sass/style.scss */
-form .form-group {
-  margin-bottom: 2%;
-  min-height: 2em;
-}
-/* line 210, ../sass/style.scss */
-form .send {
-  font-family: 'Orator', sans-serif;
-  float: right;
-}
-@media screen and (max-width: 600px) {
-  /* line 169, ../sass/style.scss */
-  form {
-    width: 100%;
-  }
+  z-index: 5;
+  left: 0;
 }
 
-/* line 220, ../sass/style.scss */
-.overlay {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
+/* line 84, ../sass/style.scss */
+.me {
+  background-image: url(../me_flat.png);
+  background-position: center;
+  background-size: 8em;
+  height: 8em;
+  width: 8em;
+  margin: 1em;
+  position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
-  background-color: #333;
-  opacity: 0.7;
-  z-index: 98;
-  display: none;
+  border: 4px solid #A2EAD2;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+/* line 100, ../sass/style.scss */
+.me:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+/* line 104, ../sass/style.scss */
+.me:active {
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
 }
