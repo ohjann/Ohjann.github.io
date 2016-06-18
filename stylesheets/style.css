@@ -1,17 +1,9 @@
-/*@font-face {
-    font-family: Futura;
-    src: url(../fonts/FuturaStd-Bold.ttf );
-}
-@font-face {
-    font-family: Orator;
-    src: url(../fonts/orator-regular.ttf );
-}*/
-/* line 11, ../sass/style.scss */
+/* line 2, ../sass/style.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -21,108 +13,103 @@
   height: 0;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 19, ../sass/style.scss */
 .clearfix {
   display: inline-block;
 }
 
 /* start commented backslash hack \*/
-/* line 30, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 31, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 .clearfix {
   display: block;
 }
 
 /* close commented backslash hack */
-/* line 34, ../sass/style.scss */
+/* line 25, ../sass/style.scss */
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: Roboto;
+  font-family: courier, monospace;
 }
 
-/* line 40, ../sass/style.scss */
-.music, .github {
-  text-transform: lowercase;
+/* line 32, ../sass/style.scss */
+.main {
+  position: absolute;
   height: 100%;
-  width: 50%;
-  float: left;
+  width: 100%;
+}
+
+/* line 37, ../sass/style.scss */
+a {
+  display: block;
+  color: black;
+  position: relative;
+  max-width: 40px;
   text-align: center;
 }
-
-/* line 47, ../sass/style.scss */
-.music {
-  background: #f50;
-}
-/* line 49, ../sass/style.scss */
-.music h1 {
-  color: #333;
-}
-
-/* line 53, ../sass/style.scss */
-.github {
-  background: #fff;
-}
-/* line 55, ../sass/style.scss */
-.github h1 {
-  color: #555;
-}
-
-/* line 60, ../sass/style.scss */
-a, a:hover, a:active, a:visited {
-  text-decoration: none;
-}
-/* line 63, ../sass/style.scss */
-a:hover * {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
+/* line 44, ../sass/style.scss */
+a.spin {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 2000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 2000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-/* line 69, ../sass/style.scss */
-h1 {
-  font-size: 10em;
-  margin: 0;
+/* line 64, ../sass/style.scss */
+.shadow {
+  text-shadow: 0px 0px #FF6138,  0px 0px #FF6138,  0px 0px #FF6138;
+  -webkit-transition: all 0.12s ease-out;
+  -moz-transition: all 0.12s ease-out;
+  -ms-transition: all 0.12s ease-out;
+  -o-transition: all 0.12s ease-out;
 }
 
-/* line 74, ../sass/style.scss */
-marquee {
-  background: transparent;
-  color: #14A697;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 5;
-  left: 0;
+/* line 73, ../sass/style.scss */
+.shadow:hover {
+  color: #FFFF9D;
+  position: relative;
+  text-shadow: 1px 1px #FF6138,  2px 2px #FF6138,  3px 3px #FF6138,  4px 4px #FF6138,  5px 5px #FF6138,  6px 6px #FF6138;
 }
 
-/* line 84, ../sass/style.scss */
-.me {
-  background-image: url(../me_flat.png);
-  background-position: center;
-  background-size: 8em;
-  height: 8em;
-  width: 8em;
-  margin: 1em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border: 4px solid #A2EAD2;
-  border-radius: 50%;
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .8s ease-in-out;
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
-/* line 100, ../sass/style.scss */
-.me:hover {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
-/* line 104, ../sass/style.scss */
-.me:active {
-  -webkit-transform: scale(0.7);
-  transform: scale(0.7);
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
