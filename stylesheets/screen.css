@@ -66,3 +66,65 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 9, ../sass/screen.scss */
+body, html {
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  height: 100%;
+  min-height: 100%;
+}
+
+/* line 15, ../sass/screen.scss */
+.container {
+  width: 600px;
+  height: 100%;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #efefef;
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 25, ../sass/screen.scss */
+.container .chatinput {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+/* line 30, ../sass/screen.scss */
+.container .chatinput input {
+  height: 48px;
+  border: none;
+  max-width: 592px;
+  width: 100%;
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+/* line 43, ../sass/screen.scss */
+.chatbubble .message {
+  background: #0084ff;
+  color: white;
+  width: auto;
+  margin: 1px 0;
+  display: inline-block;
+  max-width: 55%;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+/* line 54, ../sass/screen.scss */
+.chatbubble.left {
+  float: left;
+  clear: both;
+  border-top-right-radius: 1.3em;
+  border-bottom-right-radius: 1.3em;
+}
+/* line 60, ../sass/screen.scss */
+.chatbubble.right {
+  float: right;
+  clear: both;
+  border-top-left-radius: 1.3em;
+  border-bottom-left-radius: 1.3em;
+}
