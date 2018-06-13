@@ -42,6 +42,7 @@ a {
   height: 100%;
   transform: skewX(-5deg);
   text-align: center;
+  transition: padding 0.3s, letter-spacing 0.3s;
 
   h1 {
     transform: skewX(5deg) translate(-50%, -50%);
@@ -61,7 +62,6 @@ a {
   font-family: 'Press Start 2P', cursive;
   text-transform: lowercase;
   letter-spacing: 0.25em;
-  transition: padding 0.3s, letter-spacing 0.3s;
 
   h1:hover {
     color: darken($github-fg, 5%);
@@ -78,8 +78,8 @@ a {
   color: $soundcloud-fg;
   padding-right: 5em;
   margin-right: -5em;
-  transition: padding 0.3s;
   font-family: 'Nanum Pen Script', cursive;
+  letter-spacing: 0.25em;
 
   h1:hover {
     color: darken($soundcloud-fg, 10%);
@@ -87,5 +87,33 @@ a {
 
   &:hover {
     padding-left: 30%;
+    letter-spacing: 0.8em;
+  }
+
+  .particles.music {
+    > .particle {
+      opacity: 0;
+      position: absolute;
+      color: darken($soundcloud-fg, 10%);
+      animation: notes 2s ease-in infinite;
+      font-weight: lighter;
+    }
+  }
+}
+
+@keyframes notes {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0%);
+  }
+
+  20% { //show and hint at moving
+    opacity: 0.8;
+    transform: translate(0, -20%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, -1000%); //Big notes move faster
   }
 }

@@ -32,7 +32,8 @@ a {
   position: relative;
   height: 100%;
   transform: skewX(-5deg);
-  text-align: center; }
+  text-align: center;
+  transition: padding 0.3s, letter-spacing 0.3s; }
   .github h1,
   .soundcloud h1 {
     transform: skewX(5deg) translate(-50%, -50%);
@@ -49,8 +50,7 @@ a {
   margin-left: -5em;
   font-family: 'Press Start 2P', cursive;
   text-transform: lowercase;
-  letter-spacing: 0.25em;
-  transition: padding 0.3s, letter-spacing 0.3s; }
+  letter-spacing: 0.25em; }
   .github h1:hover {
     color: #94e0c4; }
   .github:hover {
@@ -62,9 +62,27 @@ a {
   color: #ffaaa5;
   padding-right: 5em;
   margin-right: -5em;
-  transition: padding 0.3s;
-  font-family: 'Nanum Pen Script', cursive; }
+  font-family: 'Nanum Pen Script', cursive;
+  letter-spacing: 0.25em; }
   .soundcloud h1:hover {
     color: #ff7a72; }
   .soundcloud:hover {
-    padding-left: 30%; }
+    padding-left: 30%;
+    letter-spacing: 0.8em; }
+  .soundcloud .particles.music > .particle {
+    opacity: 0;
+    position: absolute;
+    color: #ff7a72;
+    animation: notes 2s ease-in infinite;
+    font-weight: lighter; }
+
+@keyframes notes {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0%); }
+  20% {
+    opacity: 0.8;
+    transform: translate(0, -20%); }
+  100% {
+    opacity: 0;
+    transform: translate(0, -1000%); } }
