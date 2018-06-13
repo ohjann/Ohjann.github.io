@@ -1,0 +1,91 @@
+$github-bg: #dcedc1;
+$github-fg: #a8e6cf;
+$soundcloud-bg: #ff8b94;
+$soundcloud-fg: #ffaaa5;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.center {
+  position: absolute;
+  background: black;
+  height: 100%;
+  width: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  opacity: 0;
+}
+
+.github,
+.soundcloud {
+  flex-basis: 50%;
+  position: relative;
+  height: 100%;
+  transform: skewX(-5deg);
+  text-align: center;
+
+  h1 {
+    transform: skewX(5deg) translate(-50%, -50%);
+    transition: color 0.2s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.github {
+  color: $github-fg;
+  background: $github-bg;
+  padding-left: 5em;
+  margin-left: -5em;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: lowercase;
+  letter-spacing: 0.25em;
+  transition: padding 0.3s, letter-spacing 0.3s;
+
+  h1:hover {
+    color: darken($github-fg, 5%);
+  }
+
+  &:hover {
+    padding-right: 30%;
+    letter-spacing: 1.5em;
+  }
+}
+
+.soundcloud {
+  background: $soundcloud-bg;
+  color: $soundcloud-fg;
+  padding-right: 5em;
+  margin-right: -5em;
+  transition: padding 0.3s;
+  font-family: 'Nanum Pen Script', cursive;
+
+  h1:hover {
+    color: darken($soundcloud-fg, 10%);
+  }
+
+  &:hover {
+    padding-left: 30%;
+  }
+}
