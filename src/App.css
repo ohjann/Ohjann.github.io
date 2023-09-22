@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+html {
+  background: skyblue;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+      farthest-side at bottom left,
+      rgba(255, 0, 255, 0.5),
+      transparent
+    ),
+    radial-gradient(
+      farthest-corner at bottom right,
+      rgba(255, 50, 50, 0.5),
+      transparent 400px
+    ),
+    url(../public/noise.svg);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointerevents: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.overlay:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../public/noise.svg);
+  opacity: 0.2;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.title {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 15px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.last-updated {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 15px;
+  color: white;
+  opacity: 0.5;
 }

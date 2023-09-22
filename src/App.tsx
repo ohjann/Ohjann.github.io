@@ -1,48 +1,20 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
+import { Overlay } from './Overlay';
 import {
   Stage,
   Gltf,
   Float,
   Sparkles,
-  OrbitControls,
-  Environment
 } from "@react-three/drei";
 
 // https://codesandbox.io/s/9m4tpc?file=%2Fsrc%2FApp.js
 function App() {
   const [hovered, setHovered] = useState(false);
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          pointerEvents: "none",
-          width: "100%",
-          height: "100%",
-          zIndex: 1
-        }}
-      >
-        <div
-          style={{ position: "absolute", top: 40, left: 40, fontSize: "13px", color: 'white' }}
-        >
-          eoghan.hyn.es
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            bottom: 40,
-            right: 40,
-            fontSize: "13px",
-            color: 'white'
-          }}
-        >
-          22/09/2023
-        </div>
-      </div>
+    <div className="container">
+      <Overlay />
       <Canvas
         shadows
         gl={{ antialias: false }}
@@ -51,7 +23,6 @@ function App() {
         orthographic
         resize={{ scroll: false }}
       >
-        <color attach="background" args={hovered ? ["black"] : ["skyblue"]} />
         <Stage
           intensity={0.5}
           preset="soft"
@@ -94,11 +65,6 @@ function App() {
               rotation={[0, 0, 0]}
             />
           </Float>
-          <OrbitControls
-            minPolarAngle={0}
-            maxPolarAngle={Math.PI / 1.9}
-            makeDefault
-          />
         </Stage>
       </Canvas>
     </div>
