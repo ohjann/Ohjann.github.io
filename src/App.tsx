@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
-import { Overlay } from './Overlay';
-import {
-  Stage,
-  Gltf,
-  Float,
-  Sparkles,
-} from "@react-three/drei";
+import { Overlay } from "./Overlay";
+import { Stage, Gltf, Float, Sparkles } from "@react-three/drei";
 
 // https://codesandbox.io/s/9m4tpc?file=%2Fsrc%2FApp.js
 function App() {
   const [hovered, setHovered] = useState(false);
+  useEffect(
+    () => {
+      document.body.style.cursor = hovered ? "pointer" : "auto";
+    },
+    [hovered]
+  );
   return (
     <div className="container">
       <Overlay />
@@ -32,6 +33,11 @@ function App() {
         >
           <Float>
             <Gltf
+              onPointerOver={event => setHovered(true)}
+              onPointerOut={event => setHovered(false)}
+              onClick={() => {
+                window.location.href = "https://github.com/ohjann/";
+              }}
               castShadow
               receiveShadow
               scale={10}
@@ -42,8 +48,11 @@ function App() {
           <Sparkles count={50} scale={30} size={15} speed={0.8} noise={1} />
           <Float floatIntensity={0.3} speed={0.5}>
             <Gltf
-              //onPointerOver={event => setHovered(true)}
-              // onPointerOut={event => setHovered(false)}
+              onPointerOver={event => setHovered(true)}
+              onPointerOut={event => setHovered(false)}
+              onClick={() => {
+                window.location.href = "https://soundcloud.com/ohjann";
+              }}
               castShadow
               receiveShadow
               scale={0.002}
@@ -54,9 +63,11 @@ function App() {
           </Float>
           <Float floatIntensity={1.8} rotationIntensity={0.8} speed={0.7}>
             <Gltf
-              onClick={event => setHovered(!hovered)}
-              //onPointerOver={event => setHovered(true)}
-              //onPointerOut={event => setHovered(false)}
+              onClick={() => {
+                window.location.href = "https://ohjann.bandcamp.com/";
+              }}
+              onPointerOver={event => setHovered(true)}
+              onPointerOut={event => setHovered(false)}
               castShadow
               receiveShadow
               scale={9}
