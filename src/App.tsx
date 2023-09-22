@@ -15,6 +15,34 @@ function App() {
   const [hovered, setHovered] = useState(false);
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          pointerEvents: "none",
+          width: "100%",
+          height: "100%",
+          zIndex: 1
+        }}
+      >
+        <div
+          style={{ position: "absolute", top: 40, left: 40, fontSize: "13px", color: 'white' }}
+        >
+          eoghan.hyn.es
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            bottom: 40,
+            right: 40,
+            fontSize: "13px",
+            color: 'white'
+          }}
+        >
+          22/09/2023
+        </div>
+      </div>
       <Canvas
         shadows
         gl={{ antialias: false }}
