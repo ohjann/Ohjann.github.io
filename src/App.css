@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
 html {
   background: skyblue;
 }
@@ -52,4 +53,26 @@ body {
   font-size: 15px;
   color: white;
   opacity: 0.5;
+}
+
+.links {
+  opacity: 0.8;
+  color: white;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.links:hover {
+  opacity: 1;
+}
+
+.material-symbols-outlined {
+  display: inline;
+  vertical-align: center;
+  font-size: 0.6em;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 }
