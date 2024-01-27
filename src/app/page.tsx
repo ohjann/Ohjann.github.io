@@ -23,7 +23,7 @@ export default function Home() {
     [hovered]
   );
   return (
-    <div className="container">
+    <div className="home">
       <Overlay />
       <Canvas
         shadows

@@ -4,14 +4,6 @@
 @tailwind utilities;
 
 html {
-  background: skyblue;
-}
-body {
-  overflow: hidden;
-}
-.container {
-  width: 100vw;
-  height: 100vh;
   background: radial-gradient(
       farthest-side at bottom left,
       rgba(255, 0, 255, 0.5),
@@ -22,7 +14,13 @@ body {
       rgba(255, 50, 50, 0.5),
       transparent 400px
     ),
-    url(/noise.svg);
+    url(/noise.svg),
+    skyblue;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
 }
 
 .overlay {
