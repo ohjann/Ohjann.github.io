@@ -2,7 +2,7 @@ import React from "react";
 export const Overlay = () => (
   <div className="overlay">
     <div className="title">eoghan.hyn.es</div>
-    <div className="last-updated">22/09/2023</div>
+    <div className="last-updated">11/02/2024</div>
     <div className="side-projects">
       <ul>
         <li>
