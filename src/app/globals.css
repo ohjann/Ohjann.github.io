@@ -88,3 +88,10 @@ html {
   opacity: 1;
 }
 
+.open_in_new {
+  fill: white;
+  scale: 0.5;
+  position: relative;
+  top: 5px;
+  left: -4px;
+}

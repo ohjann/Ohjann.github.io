@@ -1,12 +1,11 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
-import { MaterialSymbol } from 'react-material-symbols';
-import 'react-material-symbols/sharp';
 import { Canvas } from "@react-three/fiber";
 import { Overlay } from "./Overlay";
 import { Stage, Gltf, Float, Sparkles, Html } from "@react-three/drei";
 import { Oval } from "react-loading-icons";
 import Image from "next/image";
+import OpenInNewIcon from './OpenInNewIcon';
 
 const Loader = () => (
   <Html center>
@@ -58,7 +57,7 @@ export default function Home() {
             <Html position={[-4, -3, 2]}>
               <a className="links" href="https://github.com/ohjann/">
                 github
-                <MaterialSymbol icon="open_in_new" size={14} fill weight={400} />
+                <OpenInNewIcon />
               </a>
             </Html>
             <Sparkles count={50} scale={30} size={10} speed={0.8} noise={1} />
@@ -95,7 +94,7 @@ export default function Home() {
             <Html position={[0, -1.6, -3]}>
               <a className="links" href="https://ohjann.bandcamp.com/">
                 soundcloud
-                <MaterialSymbol icon="open_in_new" size={14} fill weight={400} />
+                <OpenInNewIcon />
               </a>
             </Html>
           </Stage>
