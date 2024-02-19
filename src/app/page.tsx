@@ -79,7 +79,7 @@ export default function Home() {
             <Float floatIntensity={1.8} rotationIntensity={0.8} speed={0.7}>
               <Gltf
                 onClick={() => {
-                  window.location.href = "https://ohjann.bandcamp.com/";
+                  window.location.href = "https://soundcloud.com/ohjann";
                 }}
                 onPointerOver={event => setHovered(true)}
                 onPointerOut={event => setHovered(false)}
@@ -92,7 +92,7 @@ export default function Home() {
               />
             </Float>
             <Html position={[0, -1.6, -3]}>
-              <a className="links" href="https://ohjann.bandcamp.com/">
+              <a className="links" href="https://soundcloud.com/ohjann">
                 soundcloud
                 <OpenInNewIcon />
               </a>
