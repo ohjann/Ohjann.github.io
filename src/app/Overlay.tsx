@@ -9,7 +9,7 @@ export const Overlay = () => (
           <a href="https://eoghan.hyn.es/tonejs-sequencer/">Lil&apos; Sequencer</a>
         </li>
         <li>
-          <a href="https://eoghan.hyn.es/decision-swipe/">Decision App!<span>[WIP]</span></a>
+          <a href="https://eoghan.hyn.es/decision-swipe/">Decision App!</a>
         </li>
       </ul>
     </div>
